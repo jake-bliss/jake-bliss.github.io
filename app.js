@@ -1,5 +1,5 @@
 var getTrips = function () {
-  fetch("http://localhost:8080/trips", {credentials: "include"}).then(function (response) {
+  fetch("https://hidden-badlands-98217.herokuapp.com/trips", {credentials: "include"}).then(function (response) {
     if (response.status == 401) { // Not logged in
       // TODO: show the login/register forms
       openForm();
@@ -74,7 +74,7 @@ var getTrips = function () {
           console.log("delete clicked:", trip.tripid);
 
           if(confirm("Are you sure you want to delete " + trip.location +"?")) {
-            fetch("http://localhost:8080/trips/" + trip.tripid, {
+            fetch("https://hidden-badlands-98217.herokuapp.com/trips/" + trip.tripid, {
               // request parameters:
               method: "DELETE",
             }, {credentials: "include"}).then(function (response) {
@@ -114,7 +114,7 @@ var getTrips = function () {
 
             var bodyStr = "location=" + encodeURIComponent(newLocationValue) + "&date=" + encodeURIComponent(newDateValue) + "&rating=" + encodeURIComponent(newRatingValue) + "&cost=" + encodeURIComponent(newCostValue) + "&summary=" + encodeURIComponent(newSummaryValue) ;
 
-            fetch("http://localhost:8080/trips/" + trip.tripid, {
+            fetch("https://hidden-badlands-98217.herokuapp.com/trips/" + trip.tripid, {
               // request parameters:
               method: "PUT",
               body: bodyStr,
@@ -153,7 +153,7 @@ saveButton.onclick = function () {
 
   var bodyStr = "location=" + encodeURIComponent(newLocationValue) + "&date=" + encodeURIComponent(newDateValue) + "&rating=" + encodeURIComponent(newRatingValue) + "&cost=" + encodeURIComponent(newCostValue) + "&summary=" + encodeURIComponent(newSummaryValue) ;
 
-  fetch("http://localhost:8080/trips", {
+  fetch("https://hidden-badlands-98217.herokuapp.com/trips", {
     // request parameters:
     method: "POST",
     body: bodyStr,
@@ -281,7 +281,7 @@ var loginUser = function () {
   data += "&password=" + encodeURIComponent(loginPasswordField.value);
   console.log(data);
 
-  fetch(`http://localhost:8080/sessions`, {
+  fetch(`https://hidden-badlands-98217.herokuapp.com/sessions`, {
     method: 'POST',
     credentials: 'include',
     body: data,
@@ -323,7 +323,7 @@ var createUser = function() {
   data += "&email=" + encodeURIComponent(registerEmailField.value);
   data += "&password=" + encodeURIComponent(registerPasswordField.value);
 
-  fetch("http://localhost:8080/users", {
+  fetch("https://hidden-badlands-98217.herokuapp.com/users", {
       method: 'POST',
       credentials: 'include',
       body: data,
