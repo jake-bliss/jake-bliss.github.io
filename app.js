@@ -256,6 +256,7 @@ function closeForm2() {
 
 function openDataEntry() {
   document.getElementById("newTrip").style.display = "block";
+  document.getElementById("trips").style.display = "block";
 }
 
 function closeDataEntry() {
