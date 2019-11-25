@@ -58,6 +58,8 @@ var getTrips = function () {
         deleteButton.style.cssFloat = 'right'
         deleteButton.className = "button1"
 
+        openDataEntry();
+
         var tripList = document.querySelector("#trips")
         tripList.style.display = "block";
         newDiv.appendChild(newLocation)
