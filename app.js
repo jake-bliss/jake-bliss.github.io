@@ -121,6 +121,7 @@ var getTrips = function () {
               // request parameters:
               method: "PUT",
               body: bodyStr,
+              credentials: 'include',
               headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
               }
