@@ -2,6 +2,7 @@ var getTrips = function () {
   fetch("https://hidden-badlands-98217.herokuapp.com/trips", {credentials: "include"}).then(function (response) {
     if (response.status == 401) { // Not logged in
       // TODO: show the login/register forms
+      closeDataEntry();
       openForm();
       return;
     }
@@ -234,9 +235,6 @@ function buildEdit (trip) {
   newDiv.appendChild(saveEditButton)
   return newDiv
 }
-
-var newTripSection = document.querySelector("#trips")
-newTripSection.style.display = "none"
 
 function openForm() {
   document.getElementById("myForm").style.display = "block";
