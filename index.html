@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Travel Blog</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <div class="fullscreen nopadding">
+    <div id="header">
+      <img src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Small.png" width="50px" />
+      <h4>   Welcome</h4>
+    </div>
+    <div class="header">
+        <div class="form-popup" id="myForm">
+            <div class="form-container">
+              <h1>Login</h1>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" id="login_email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="login_password" required>
+          
+              <button class="btn" id="login_submit">Login</button>
+              <!-- <button type="submit" class="btn cancel" onclick="closeForm()">Close</button> -->
+              <small><small><small><a style="font-family:arial;" font-weight="normal;" cursor="pointer;" id="login_register">Don't Have an Account. Click Here.</a></small></small></small>
+            </div>
+          </div>
+
+          <div class="form-popup" id="myForm2">
+              <div class="form-container">
+                <h1>Register</h1>
+
+                <label for="email"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" name="fname" id="register_fname" required>
+
+                <label for="email"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lname" id="register_lname" required>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="register_email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="register_password" required>
+            
+                <button class="btn" id="register_register">Register</button>
+                <!-- <button type="submit" class="btn cancel" onclick="closeForm()">Close</button> -->
+              </div>
+            </div>
+      <h1>Travel Blog</h1>
+    </div>
+  </div>
+
+  <div class="white nopadding more">
+      <a id="more">&#x25BC; More &#x25BC;</a>
+  </div>
+
+  <div class="main-section" id="trips">
+      <div class="semitrans" id="newTrip">
+          <h1>What was your last trip?</h1>
+          Location:<br>
+          <input type="text" name="location" id="location-input"><br>
+          Date:<br>
+          <input type="text" name="date" id="date-input"><br>
+          Rating:<br>
+          <input type="text" name="rating" id="rating-input"><br>
+          Cost:<br>
+          <input type="text" name="cost" id="cost-input"><br>
+          Summary:<br>
+          <textarea rows="4" cols="50" id="summary-input"></textarea><br>
+          <button id="save" class="button1">Save</button>
+          <p></p>
+      </div>
+  </div>
+  <script type="text/javascript" src="app.js"></script>
+</html>
