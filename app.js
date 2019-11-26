@@ -80,7 +80,8 @@ var getTrips = function () {
             fetch("https://hidden-badlands-98217.herokuapp.com/trips/" + trip.tripid, {
               // request parameters:
               method: "DELETE",
-            }, {credentials: "include"}).then(function (response) {
+              credentials: "include"
+            }).then(function (response) {
             // handle the response:
               console.log("Server responded!");
               while (tripList.childNodes.length > 2) {
