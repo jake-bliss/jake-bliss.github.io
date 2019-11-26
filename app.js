@@ -125,7 +125,7 @@ var getTrips = function () {
               headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
               }
-            }, {credentials: "include"}).then(function (response) {
+            }).then(function (response) {
               // handle the response:
               console.log("Server responded!");
               editDiv.innerHTML=""
@@ -161,10 +161,11 @@ saveButton.onclick = function () {
     // request parameters:
     method: "POST",
     body: bodyStr,
+    credentials: "include",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
     }
-  }, {credentials: "include"}).then(function (response) {
+  }).then(function (response) {
     // handle the response:
     console.log("Server responded!");
     locationField.value=''
@@ -290,7 +291,7 @@ var loginUser = function () {
     headers: {
       "Content-type": "application/x-www-form-urlencoded"
     }
-  }, {credentials: "include"}).then(function (response) {
+  }).then(function (response) {
       if (response.status == 401 || data == "") { // Not logged in
           alert("Invalid Login Please Try again.")
           openForm()
@@ -332,7 +333,7 @@ var createUser = function() {
       headers: {
           "Content-type": "application/x-www-form-urlencoded"
       }
-  }, {credentials: "include"}).then(function (response) {
+  }).then(function (response) {
       if (response.status == 401) { // Not logged in
           // TODO: show the login/register forms
           openForm();
